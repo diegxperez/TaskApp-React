@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --background-color: #f2f1e6;
+  --color-button: #85c7f2;
+  --backgroud-color-alternative: #fcecc9;
+  --color-button-alternative: #fa824c;
+  --color-button-brown: #51291e;
+  --color-button2: #279af1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*display: flex;*/
+  margin: 0;
+  background-color: var(--background-color);
+  /*min-width: 320px;*/
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  width: 90%;
+  /*text-align: center;*/
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  min-height: 100dvh;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: transparent;
+}
+

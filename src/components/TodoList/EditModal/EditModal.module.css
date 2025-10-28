@@ -1,0 +1,53 @@
+.modal__overlay,
+.modal__container {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background: rgba(49, 49, 49, 0.2);
+}
+
+.modal__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 180px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.modal__input {
+  border: 1px solid var(--color-button-brown);
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 8px 12px;
+  width: 100%;
+}
+
+.btn__close {
+  padding: 8px 6px;
+  margin-left: auto;
+  border-radius: 6px;
+  background-color: orangered;
+  color: white;
+}
+
+.btn__edit {
+  padding: 8px 6px;
+  margin: 0 auto;
+  background-color: royalblue;
+  border-radius: 6px;
+  color: white;
+  padding: 8px 12px;
+}

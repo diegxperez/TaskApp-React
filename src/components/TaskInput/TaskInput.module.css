@@ -1,0 +1,31 @@
+.container {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.container__input {
+  border: 1px solid var(--color-button-brown);
+  border-right: none;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  font-size: 14px;
+  padding: 8px 12px;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.container__button {
+  background-color: var(--color-button-brown);
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  margin: 0;
+  border: 1px solid transparent;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  flex-grow: 0;
+}
