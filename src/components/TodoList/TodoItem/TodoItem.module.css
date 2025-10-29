@@ -10,7 +10,8 @@
 }
 
 .todoitem_completed {
-  display: inline-flexbox;
+  /*verificar*/
+  display: inline-flex;
 }
 
 .todoitem_description {

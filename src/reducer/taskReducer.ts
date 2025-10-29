@@ -2,7 +2,7 @@ import type { Task } from "../interfaces/task.interface";
 
 export type Action =
   | { type: "ADD_TASK"; payload: string }
-  | { type: "DELETE-TASK"; payload: string }
+  | { type: "DELETE_TASK"; payload: string }
   | { type: "TOGGLE_TASK_COMPLETION"; payload: string }
   | { type: "EDIT_TASK"; payload: { id: string; newDescription: string } };
 
@@ -40,7 +40,7 @@ export const taskReducer = (tasks: Task[], action: Action): Task[] => {
         return task;
       });
     }
-    case "DELETE-TASK": {
+    case "DELETE_TASK": {
       return tasks.filter((task) => task.id !== action.payload);
     }
     default:

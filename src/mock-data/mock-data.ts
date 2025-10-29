@@ -14,7 +14,7 @@ export const mockdata: Task[] = [
   {
     id: crypto.randomUUID(),
     description: "Llamar al dentista para agendar cita 📞",
-    isCompleted: false, // Ya completada para mostrar variedad
+    isCompleted: false,
   },
   {
     id: crypto.randomUUID(),

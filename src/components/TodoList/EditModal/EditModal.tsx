@@ -21,12 +21,13 @@ export const EditModal: React.FC<Props> = ({
     if (newDescription) {
       onEditTask(id, newDescription);
       alert("Nueva descripcion añadida");
+      onCloseModal();
     }
   };
 
   return (
     <div className={s.modal__overlay}>
-      <div className={s.modal__container}>
+      <div onClick={onCloseModal} className={s.modal__container}>
         <div className={s.container}>
           <button onClick={onCloseModal} className={s.btn__close}>
             Cerrar

@@ -21,7 +21,7 @@ export const TodoItem: React.FC<Props> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleToogleModal = () => {
+  const handleToggleModal = () => {
     setIsOpen(!isOpen);
   };
 
@@ -40,7 +40,7 @@ export const TodoItem: React.FC<Props> = ({
         {description}
       </p>
       <div className={s.todoitem_actions}>
-        <button onClick={handleToogleModal} className={s.todoitem_edit}>
+        <button onClick={handleToggleModal} className={s.todoitem_edit}>
           Editar
         </button>
         <button onClick={() => onDeletedTask(id)} className={s.todoitem_delete}>
@@ -49,7 +49,7 @@ export const TodoItem: React.FC<Props> = ({
       </div>
       {isOpen && (
         <EditModal
-          onCloseModal={handleToogleModal}
+          onCloseModal={handleToggleModal}
           onEditTask={onEditTask}
           id={id}
           description={description}

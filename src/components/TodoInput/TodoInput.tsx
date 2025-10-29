@@ -1,12 +1,11 @@
-import s from "./TaskInput.module.css";
+import s from "./TodoInput.module.css";
 
 interface Props {
   taskRef: React.RefObject<HTMLInputElement | null>;
   onAddTask: () => void;
 }
 
-export const TaskInput: React.FC<Props> = ({ taskRef, onAddTask }) => {
-
+export const TodoInput: React.FC<Props> = ({ taskRef, onAddTask }) => {
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       onAddTask();

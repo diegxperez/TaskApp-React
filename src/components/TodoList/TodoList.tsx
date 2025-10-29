@@ -17,17 +17,21 @@ export const TodoList: React.FC<Props> = ({
 }) => {
   return (
     <div className={s.todo_list}>
-      {tasks.map((item) => (
-        <TodoItem
-          key={item.id}
-          id={item.id}
-          description={item.description}
-          isCompleted={item.isCompleted}
-          onCheckedTask={onCheckedTask}
-          onDeletedTask={onDeletedTask}
-          onEditTask={onEditTask}
-        />
-      ))}
+      {tasks.length > 0 ? (
+        tasks.map((item) => (
+          <TodoItem
+            key={item.id}
+            id={item.id}
+            description={item.description}
+            isCompleted={item.isCompleted}
+            onCheckedTask={onCheckedTask}
+            onDeletedTask={onDeletedTask}
+            onEditTask={onEditTask}
+          />
+        ))
+      ) : (
+        <p>No hay tareas</p>
+      )}
     </div>
   );
 };
