@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border: 1px solid salmon;
   align-items: start;
   padding: 8px 6px;
   border-radius: 8px;
@@ -10,7 +9,6 @@
 }
 
 .todoitem_completed {
-  /*verificar*/
   display: inline-flex;
 }
 
@@ -24,4 +22,24 @@
 .todoitem_actions {
   display: flex;
   column-gap: 8px;
+}
+
+.todoitem_description_completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.todoitem_edit,
+.todoitem_delete {
+  font-weight: 600;
+  border: 1px solid;
+  border-radius: 6px;
+  padding: 0 12px;
+}
+
+.todoitem_edit {
+  color: var(--color-button2);
+}
+.todoitem_delete {
+  color: var(--color-error);
 }

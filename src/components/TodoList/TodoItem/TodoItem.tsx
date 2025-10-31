@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { EditModal } from "../EditModal/EditModal";
 import s from "./TodoItem.module.css";
+import { cn } from "../../../utils/className";
 
 interface Props {
   id: string;
@@ -32,18 +33,29 @@ export const TodoItem: React.FC<Props> = ({
         onChange={() => onCheckedTask(id)}
         checked={isCompleted}
         className={s.todoitem_completed}
+        aria-label={`Marcar como ${isCompleted ? "pendiente" : "completada"}: ${description}`}
       />
       <p
-        style={isCompleted ? { textDecoration: "line-through" } : {}}
-        className={s.todoitem_description}
+        className={cn(
+          s.todoitem_description,
+          isCompleted ? s.todoitem_description_completed : "",
+        )}
       >
         {description}
       </p>
       <div className={s.todoitem_actions}>
-        <button onClick={handleToggleModal} className={s.todoitem_edit}>
+        <button
+          onClick={handleToggleModal}
+          className={s.todoitem_edit}
+          aria-label={`Editar tarea: ${description}`}
+        >
           Editar
         </button>
-        <button onClick={() => onDeletedTask(id)} className={s.todoitem_delete}>
+        <button
+          onClick={() => onDeletedTask(id)}
+          className={s.todoitem_delete}
+          aria-label={`Eliminar tarea: ${description}`}
+        >
           Eliminar
         </button>
       </div>

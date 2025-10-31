@@ -18,6 +18,12 @@
   --color-button-alternative: #fa824c;
   --color-button-brown: #51291e;
   --color-button2: #279af1;
+
+  --color-error: #ff6b6b;
+  --color-error-bg: rgba(255, 107, 107, 0.05);
+  --color-button-brown-hover: #3d1f17;
+  --color-disabled: #ccc;
+  --color-text-muted: #666;
 }
 
 *,
@@ -29,10 +35,7 @@
 }
 
 body {
-  /*display: flex;*/
   margin: 0;
-  /*background-color: var(--background-color);*/
-  /*min-width: 320px;*/
   min-height: 100vh;
 }
 
@@ -41,7 +44,6 @@ body {
   margin: 0 auto;
   padding: 1rem 0;
   width: 90%;
-  /*text-align: center;*/
   display: flex;
   flex-direction: column;
   justify-items: center;

@@ -4,6 +4,7 @@ import { mockdata } from "../mock-data/mock-data";
 import { useLocalStorage } from "./useLocalStorage";
 import type { Task } from "../interfaces/task.interface";
 import type { FilterType } from "../interfaces/filters.type";
+import { TASK_ACTIONS } from "../constants/taskActions";
 
 const STORAGE_KEY = "tasks";
 
@@ -23,7 +24,7 @@ export const useTasks = () => {
   const addTask = (description: string) => {
     if (description.trim()) {
       dispatch({
-        type: "ADD_TASK",
+        type: TASK_ACTIONS.ADD_TASK,
         payload: description,
       });
     }
@@ -31,17 +32,17 @@ export const useTasks = () => {
 
   const completedTask = (id: string) => {
     dispatch({
-      type: "TOGGLE_TASK_COMPLETION",
+      type: TASK_ACTIONS.TOGGLE_TASK_COMPLETION,
       payload: id,
     });
   };
 
   const deleteTask = (id: string) => {
-    dispatch({ type: "DELETE_TASK", payload: id });
+    dispatch({ type: TASK_ACTIONS.DELETE_TASK, payload: id });
   };
 
   const editTask = (id: string, newDescription: string) => {
-    dispatch({ type: "EDIT_TASK", payload: { id, newDescription } });
+    dispatch({ type: TASK_ACTIONS.EDIT_TASK, payload: { id, newDescription } });
   };
 
   const getFilteredTasks = (filterType: FilterType): Task[] => {

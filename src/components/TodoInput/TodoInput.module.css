@@ -31,12 +31,12 @@
 }
 
 .container__input[aria-invalid="true"] {
-  border-color: #ff6b6b;
-  background-color: rgba(255, 107, 107, 0.05);
+  border-color: var(--color-error);
+  background-color: var(--color-error-bg);
 }
 
 .container__input[aria-invalid="true"]:focus {
-  box-shadow: 0 0 0 1px #ff6b6b;
+  box-shadow: 0 0 0 1px var(--color-error);
 }
 
 .container__button {
@@ -53,7 +53,7 @@
 }
 
 .container__button:hover:not(:disabled) {
-  background-color: #3d1f17;
+  background-color: var(--color-button-brown-hover);
   transform: translateY(-1px);
 }
 
@@ -64,8 +64,8 @@
 .container__button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  background-color: #ccc;
-  border-color: #ccc;
+  background-color: var(--color-disabled);
+  border-color: var(--color-disabled);
 }
 
 .char_counter {
@@ -74,7 +74,7 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 11px;
-  color: #ff6b6b;
+  color: var(--color-error);
   font-weight: 600;
   pointer-events: none;
   background-color: rgba(255, 255, 255, 0.9);
@@ -85,7 +85,7 @@
 .error_message {
   margin: 4px 0 0 0;
   font-size: 12px;
-  color: #ff6b6b;
+  color: var(--color-error);
   font-weight: 500;
   animation: slideDown 0.2s ease-out;
 }
