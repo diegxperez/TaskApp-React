@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useReducer } from "react";
 import { taskReducer } from "../reducer/taskReducer";
 import { mockdata } from "../mock-data/mock-data";
+import { useLocalStorage } from "./useLocalStorage";
 import type { Task } from "../interfaces/task.interface";
 import type { FilterType } from "../interfaces/filters.type";
-import { useLocalStorage } from "./useLocalStorage";
 
 const STORAGE_KEY = "tasks";
 
@@ -18,7 +18,7 @@ export const useTasks = () => {
   // Sincronizar: cada vez que state cambia, guardar en LocalStorage
   useEffect(() => {
     setStoredTasks(state);
-  }, [state, setStoredTasks])
+  }, [state, setStoredTasks]);
 
   const addTask = (description: string) => {
     if (description.trim()) {
